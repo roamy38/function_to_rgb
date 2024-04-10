@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body , html {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	height: 100%;
+	background-color: transparent;
+	background-image: url('http://css.roamy.de/default/roamy_bg.jpg');
+	background-size: 100% 100%;
+	font-family: 'Dosis';
+}
+
+
+input, select , textarea {
+	box-sizing: border-box;
+	display: block;
+	height: 100%;
+	background-color: transparent;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border: 1px solid #606060;
+	border-radius: 4px;
+	resize: none;
+}
+
+progress {
+	margin: 2px;
+	display: block;
+	height: 32px;
+}
+
+label {
+        color: white;
+}
+
+.btn_ok {
+	border-style: none;
+	display: inline-block;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background: url('http://css.roamy.de/Bubble/btn_ok_0.png');
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+.btn_ok:hover {
+	background: url('http://css.roamy.de/Bubble/btn_ok_1.png');
+}
+
+#btn_savefile {
+	border-style: none;
+	display: inline-block;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background: url('http://css.roamy.de/Bubble/download_0.png');
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+
+#btn_savefile:hover {
+	background: url('http://css.roamy.de/Bubble/download_1.png');
+}
+
+#btn_open {
+	border-style: none;
+	display: inline-block;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background: url('http://www.roamy.de/css/Bubble/btn_file_0.png');
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+#btn_open:hover {
+	background: url('http://www.roamy.de/css/Bubble/btn_file_1.png');
+}
+
+
+
+#btn_math {
+	border-style: none;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: transparent;
+	background: url('http://css.roamy.de/btn32/math_0.png');
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+
+}
+#btn_math:hover {
+	background: url('http://css.roamy.de/btn32/math_1.png');
+}
+
+#win_type {
+	border-style: none;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: 100%;
+	background: url('http://css.roamy.de/btn32/hdd_0.png');
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+
+#win_type:hover {
+	background: url('http://css.roamy.de/btn32/hdd_1.png');
+}
+
+
+
+#btn_hide {
+	border-style: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background: url('http://css.roamy.de/btn32/visible_0.png');
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+#btn_hide:hover {
+	background: url('http://css.roamy.de/btn32/visible_1.png');
+}
+
+#btn_help {
+	border-style: none;
+	display: inline-block;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 24px 24px;
+	background: url('http://css.roamy.de/Bubble/btn24_help_0.png');
+	padding: 0px;
+	width: 24px;
+	height: 24px;
+}
+#btn_help:hover {
+	background: url('http://css.roamy.de/Bubble/btn24_help_1.png');
+}
+
+
+#btn_show {
+	border-style: none;
+	display: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background: url('http://css.roamy.de/btn32/view_0.png');
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+#btn_show:hover {
+	background: url('http://css.roamy.de/btn32/view_1.png');
+}
+
+#btn_x {
+	border-style: none;
+	display: none;
+	background-color: transparent;
+	background: url('http://css.roamy.de/Bubble/btn_X_off.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+
+#btn_x:hover {
+	background: url('http://css.roamy.de/Bubble/btn_x_1.png');
+}
+
+#btn_next {
+	border-style: none;
+	display: inline;
+	background-color: transparent;
+	background: url('http://css.roamy.de/Bubble/btn_next_0.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+
+#btn_next:hover {
+	background: url('http://css.roamy.de/Bubble/btn_next_1.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+
+#btn_prev {
+	border-style: none;
+	display: inline;
+	background-color: transparent;
+	background: url('http://css.roamy.de/Bubble/btn_prev_0.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+
+#btn_prev:hover {
+	background: url('http://css.roamy.de/Bubble/btn_prev_0.png');
+}
+
+#btn_down {
+	border-style: none;
+	display: inline;
+	background-color: transparent;
+	background-image: url('http://css.roamy.de/Bubble/btn_down_0.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0px;
+	font-size: 8px;
+	width: 32px;
+	height: 32px;
+}
+
+#btn_down:hover {
+	background-image: url('http://css.roamy.de/Bubble/btn_down_1.png');
+}
+
+#btn_up {
+	border-style: none;
+	display: inline;
+	background-color: transparent;
+	background: url('http://css.roamy.de/Bubble/btn_up_0.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+}
+
+.div_title {
+	max-height: 32px;
+	background-color: #40b29e;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.div_title>div {
+
+	display: inline;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	max-height: 32px;
+	overflow: hidden;
+	padding: 0px;
+	margin: 16px 0px;
+}
+
+.line {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.div_title>div {
+	display: inline;
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+	height: 32px;
+}
+
+
+#btn_up:hover {
+	background: url('http://css.roamy.de/Bubble/btn_up_1.png');
+}
+
+#win_message  {
+	left: 333px;
+	top 0px;
+	position: absolute;
+	z-index: 999;
+	opacity: 1.0;
+}
+
+li + ul {
+	display: none;
+}
+li:hover + ul {
+	display: block;
+}
+li + ul:hover {
+	display: block;
+}
+
+li {
+	list-style-image: url('http://css.roamy.de/dir16/dir.png');
+}
+li:hover {
+	list-style-image: url('http://css.roamy.de/dir16/diropen0.png');
+}
+
+.txtRGB {
+	width: 100%;
+	height: 28px;
+	font-size: 20px;
+	font-weight: 500;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url('http://css.roamy.de/default/white.png');
+}
+.txtRGB:focus {
+	background-image: url('http://css.roamy.de/default/space.png');
+}
+
+.nrRGB {
+	display: inline;
+	height: 24px;
+	width: 50px;
+	color: inherit;
+	font-size: 18px;
+	font-weight: 500;
+	border: solid 1px #808080;
+	overflow: hidden;
+	text-align: right;
+	size: 2;
+	background-color: transparent;
+}
+
+.nrRGB:focus {
+	background-color: #ffffff;
+}
+
+input.txtCOL {
+	height: 24px;
+	display: inline-block;
+	color: inherit;
+	font-size: 18px;
+	border: solid 1px #808080;
+	background-color: transparent;
+}
+
+input.txtCOL:focus {
+	background-color: #ffffff;
+}
+
+div.txtCOL {
+	display: inline-block;
+}
+
+div.txtCOL > div {
+	display: inline;
+	overflow: visible;
+}
+
+button[type=submit].btn_img {
+	background-color: transparent;
+	display: inline;
+	padding: 2px;
+	margin: 2px;
+}
+
+
+.img_preview {
+	display: inline-block;
+	border-style: solid;
+	border-width: 16px;
+
+	background-color: transparent;
+	border-color: transparent;
+	border-image: url('http://css.roamy.de/Glossy/input_line_gelb_32.png') round 16;
+	width: 288px;
+	height: 288px;
+}
+
+.img_preview > img {
+	width: 256px;
+	height: 256px;
+	border-style: none;
+}
+
+#div_img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	top: 0;
+	left: 0;
+}
+
+#l_varname {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: stretch;
+}
+
+#new_varname > input {
+	display: inline;
+	height: 32px;
+	width: auto;
+	color: inherit;
+	font-size: 22px;
+	border: solid 1px #808080;
+	background-color: transparent;
+}
+#new_varname > button {
+	display: inline;
+	height: 32px;
+	width: 32Spx;
+	border-style: none;
+	background-color: transparent;
+	
+}
+
+</style>
+<script>
+
+
+var PI2 = 2.0*Math.PI;
+var PI05 = Math.PI/2;
+var POW05 = Math.sqrt(2);
+
+
+window.onerror = function ( s_Message , s_File, s_Line , s_pos="" ){
+  	alert( s_Message + ":\nFile:\"" + s_File + "\"\nLine[" + s_Line +"]@" + s_pos );
+return true;
+}
+function str_replace( sINPUT , sDL1 , sDL2 ){ return sINPUT.split(sDL1).join(sDL2);}
+
+function $( id ){ return document.getElementById(id); }
+function sin( f ){ return Math.sin( f * Math.PI  ); }
+function cos( f ){ return Math.cos( f * Math.PI ); }
+function tan( f ){ return Math.tan( f * Math.PI ); }
+function sin_( f ){ return Math.asin( f ) / Math.PI; }
+function cos_( f ){ return Math.acos( f ) / Math.PI; }
+
+
+function rnd( f = 1.0 ){ return f* Math.sinh( ( Math.random() - 1 )*1.762747174039086 ); }
+function ln( f ){ return Math.log(f); }
+function pow( f1 , f2 ){ if( f2 < 0){ return -Math.pow(f1, -f2); }return Math.pow(f1, f2);  }
+function exp( f ){ return Math.exp(f); }
+function gauss( f ){ return f / ( 1 + Math.abs(f)); }
+function min( f1,f2 ){ return Math.max(f1,f2 ); }
+function max( f1,f2 ){ return Math.min(f1,f2 ); }
+function gt(f1,f2 ){ return parseFloat(f1>f2); }
+function st(f1,f2 ){ return parseFloat(f1<f2); }
+function lt(f1,f2 ){ return parseFloat(f1<f2); }
+function int( f ){ return parseInt( Math.sign( f )*0.5 + 1 ); }
+function mod( f1 , f2 = 1.0 ){ if( f2 == 0.0 ){ return Number.MAX_VALUE; } return f1 - f2*parseInt( f1 / f2 ); }
+function abs( f ){ return Math.abs(f); }
+function atan2( f1 , f2 ){  return Math.atan2( f1 , f2 )/Math.PI; }
+
+
+
+function _1( f ){ if( f== 0.0 ){ return Number.MAX_VALUE; } return 1.0/f; }
+var E = Math.E;
+function pow( f1 , f2 ){ if( f2 < 0 ){ return -Math.exp( -f2*Math.log( f1 ) ); } return Math.pow( f1 , f2 ); }
+var X = 0.0;
+var Y = 0.0;
+var Y2 = 0.0;
+var Angle=0;
+var Radius=0;
+var pXY = [0,0];
+var Z = 0.0;
+var T = 0.0;
+var BW = 0;
+var HUE=0;
+var CLR = 0.0;
+var CLR2 = 0.0;
+var RR=0;
+var img_LINE=false;
+
+var LIB = new Object();
+
+LIB["MAX"] = "10";
+var RGB = [ 0.0 , 0.0 , 0.0 ];
+var imgDATA = [0,0,0,0];
+
+var W2 = window.innerWidth/2;
+var H2 = window.innerHeight /2;
+
+var iTS1;
+
+
+function getColor( f ){
+	var rF = f*6;
+	var iPOS = parseInt(rF)%6;
+	rF -= Math.floor( rF );
+	switch( iPOS ){
+		case 0:	return [ rF , 0.0 , 1.0 ];
+		case 1:	return [ 1.0 , 0.0 , parseFloat( 1.0 - rF ) ];
+		case 2:	return [ 1.0 , rF , 0.0 ];		
+		case 3:	return [ parseFloat( 1.0 - rF ) , 1.0 , 0.0 ];
+		case 4:	return [ 0.0 , 1.0 , rF ];		
+		case 5:	return [ 0.0 , parseFloat( 1.0 - rF ) , 1.0 ];
+	}
+}
+
+
+function fix_text( sTEXT ){
+	if( sTEXT == "" ){ return "0"; }
+	sTEXT = str_replace( sTEXT ," ","");
+	sTEXT = str_replace( sTEXT ,"\t","");
+	sTEXT = str_replace( sTEXT , "(","[");
+	sTEXT = str_replace( sTEXT , ")","]");
+
+	sTEXT = str_replace( sTEXT , ",","),(");
+	sTEXT = str_replace( sTEXT , "*",")*(");
+	sTEXT = str_replace( sTEXT , "+",")+(");
+	sTEXT = str_replace( sTEXT , "-",")-(");
+	sTEXT = str_replace( sTEXT , "~",")+rnd(");
+	sTEXT = str_replace( sTEXT , "/",")*_1(");
+	var aTEST = sTEXT.split("[");
+	var iLEN = aTEST.length;
+	aTEST = sTEXT.split("]");
+	iLEN -= aTEST.length;
+	for( var i=0;i<iLEN;i++){
+		sTEXT += "]"; 
+	}
+	for( var i=0;i<-iLEN;i++){
+		sTEXT = "[" + sTEXT; 
+	}
+	sTEXT = "[" + sTEXT + "]";
+	sTEXT = str_replace( sTEXT ,"[","((");
+	sTEXT = str_replace( sTEXT ,"]","))");
+return sTEXT = str_replace( sTEXT , "()","");
+}
+
+
+function fix_arg( sID ){
+	var obj = $( sID );
+	var s_id = obj.name.replace("VAR_","");
+	if( obj.title != "undefined" ){
+		s_id = obj.title;
+	}
+	window.LIB[ s_id ] = fix_text( obj.value );
+}
+var isBREAK = false;
+
+function get_XY_Bytes( iX , iY ){
+	oCANVAS = getElementsByTagName("canvas")[0];
+	iX = min( pXY[0] + iX, oCANVAS.width );
+	iY = min( pXY[1] + iY , oCANVAS.height );
+	var iPOS = (( max(iX,0)+max(iY,0)*oCANVAS.width )*4)%imgDATA.length;
+return [ imgDATA[iPOS],imgDATA[iPOS+1], imgDATA[iPOS+2], imgDATA[iPOS+3] ];
+}
+
+function R( iX , iY ){
+	if( !oCANVAS ){ oCANVAS = $("myCanvas");}
+	iX = max( min( pXY[0] + iX ,oCANVAS.width) , 0 );
+	iY = max( min( pXY[1] + iY ,oCANVAS.height) , 0 );
+return parseFloat( imgDATA[ ( x*4 + y*4*oCANVAS.width )%imgDATA.length ] ) / 255.0; 
+}
+
+function G( iX , iY ){
+	if( !oCANVAS ){ oCANVAS = $("myCanvas");}
+	iX = max( min(  pXY[0] + iX ,oCANVAS.width) , 0 );
+	iY = max( min( pXY[1] + iY ,oCANVAS.height) , 0 );
+return parseFloat( imgDATA[ ( x*4 + y*4*oCANVAS.width +1 )%imgDATA.length ] ) / 255.0; 
+}
+
+function B( iX , iY ){
+	if( !oCANVAS ){ oCANVAS = $("myCanvas");}
+	iX = max( min( pXY[0] + iX ,oCANVAS.width) , 0 );
+	iY = max( min( pXY[1] + iY ,oCANVAS.height) , 0 );
+return parseFloat( imgDATA[ ( x*4 + y*4*oCANVAS.width +2 )%imgDATA.length ] ) / 255.0; 
+}
+
+
+function A( iX , iY ){
+	if( !oCANVAS ){ oCANVAS = $("myCanvas");}
+	iX = max( min( pXY[0] + iX ,oCANVAS.width) , 0 );
+	iY = max( min( pXY[1] + iY ,oCANVAS.height) , 0 );
+return parseFloat( imgDATA[ ( x*4 + y*4*oCANVAS.width +3 )%imgDATA.length ] ) / 255.0; 
+}
+
+function doBreak( Ereignis ){ window.isBREAK = true; }
+function onBreak( Ereignis ){ if( Ereignis.keyCode === 27 ){  doBreak( Ereignis ); }}
+
+function init_canvas( isPreview=false ){
+	var oCANVAS = $("myCanvas");
+	if( isPreview ){
+		oCANVAS.width = 128;
+		oCANVAS.height = 128; 		
+	}
+	else{
+		if(  $("nr_x").value > 0 ){
+			oCANVAS.width = parseInt( $("nr_x").value ); 
+		}
+		else{
+			oCANVAS.width = Math.min( parseInt( window.innerWidth ) , parseInt(window.innerHeight) );
+			oCANVAS.height = oCANVAS.width;
+
+		}
+		oCANVAS.height = parseInt( parseFloat(  oCANVAS.width*$('fRATIO').value ));
+		$('POS').setAttribute('max',oCANVAS.height);
+		$('POS').value=0;
+	}
+
+	window.W2 = oCANVAS.width /2 -0.5;
+	window.H2 = oCANVAS.height/2 -0.5;
+
+
+	var ctx = oCANVAS.getContext("2d");
+	ctx.clearRect(0,0,oCANVAS.width,oCANVAS.height);
+	imgDATA = ctx.createImageData(oCANVAS.width, oCANVAS.height );
+
+	window.iTS1 = parseInt( Date.now() );
+	window.isBREAK = false;
+}
+
+
+function draw_canvas( iPX ){
+	if( iY == 0 ){ init_canvas(isTest);
+		 $('VAR_R').value = fix_text( $('txtR').value );
+		 $('VAR_G').value = fix_text( $('txtR').value );
+		 $('VAR_B').value = fix_text( $('txtR').value );
+		 $('VAR_A').value = fix_text( $('txtR').value );
+		 $('VAR_BW').value = fix_text( $('txtVAR_BW').value );
+
+	}
+	var oC = document.getElementById('oCANVAS_IN');
+	oC.width = iPX;
+	oC.height = iPX;
+
+	window.oCANVAS = document.getElementById('oCANVAS_OUT');
+	window.oCANVAS.style.display = "inline-block";
+	oC.style.display = "inline-block";
+
+	window.oCANVAS.width = oIN.width;
+	window.oCANVAS.height = oIN.height;
+	window.oCTX_OUT = oCANVAS.getContext('2d');
+
+	window.oCTX_IN = oC.getContext('2d');
+	window.oCTX_IN.drawImage( document.getElementById('img_in') , 0 , 0 , oIN.width , oIN.height );
+
+	document.getElementById('POS').max = oIN.height;
+	document.getElementById('POS').value = 0;
+
+	window.fHalfPixel = (iPX - 1)/2;
+
+	var get_X_Value = new Function( "function( X,Y,RR ){ return (" + fix_text( $('txtX').value ) + ");}" );
+	var get_Y_Value = new Function( "function( X,Y,RR ){ return (" + fix_text( $('txtY').value ) + ");}" );
+	var get_A_Value = new Function( "function( X,Y,RR ){ return (" + fix_text( $('txtA').value ) + ");}" );
+
+	var imgPIXEL;
+	var fPX, fPY;
+	var imgLINE = oCTX_IN.createImageData(iPX,1);
+	for(var iY=0;iY < iPX;iY++){
+		Y = iY / window.fHalfPixel -1;
+		for(var iX=0;iX < iPX;iX++){
+			X = iX / window.fHalfPixel -1;
+			fPX = window.fHalfPixel * ( 1 + get_X_Value(X,Y,RR) );
+			fPY = window.fHalfPixel * ( 1 + get_Y_Value(X,Y,RR) );
+			if( fPX >= 0 && fPX <= 1 && fPY >= 0  && fPY <= 1 ){
+				imgPIXEL = oCTX_IN.getImageData(parseInt(fPX),parseInt(fPY),1,1);
+				for(var i=0;i < 4;i++){
+					imgLINE[iX*4+i] = imgPIXEL[i];
+				}
+			}
+		}
+		window.oCTX_OUT.putImageData( imgLINE , 0 , iY  );
+	}
+}
+
+
+
+
+function draw_line_rgb( iY , isTest=false ){
+	var get_X_Value = false;
+	if( iY == 0 ){ init_canvas(isTest);
+		 $('VAR_R').value = fix_text( $('txtR').value );
+		 $('VAR_G').value = fix_text( $('txtG').value );
+		 $('VAR_B').value = fix_text( $('txtB').value );
+		 $('VAR_A').value = fix_text( $('txtA').value );
+		 $('VAR_BW').value = fix_text( $('txtVAR_BW').value );
+		 $('VAR_HUE').value = fix_text( $('txtVAR_HUE').value );
+		
+	}
+	var s_HUE = $('VAR_HUE').value;
+	var s_BW =  $('VAR_BW').value;
+	var s_R = $('VAR_R').value;
+	var s_G = $('VAR_G').value;
+	var s_B = $('VAR_B').value;
+	var s_A = $('VAR_A').value;
+	var iA;
+
+	var oCANVAS = document.getElementById("myCanvas");
+	if( iY >= oCANVAS.height ){
+		window.isBREAK = true;
+		var iSS = ( Date.now() - window.iTS1 )*0.001; $('s_time').innerHTML = "done in " + iSS + " sec";
+		var s_img = oCANVAS.toDataURL();
+		$('img_src_preview').value = s_img;
+		$('img_btn_preview').src = s_img;
+		$('btn_savefile').style.display = "inline-block";
+		$('POS').value = 0;
+		return;
+	}
+	var ctx = oCANVAS.getContext("2d");
+	if( window.isBREAK ){ return parseInt( imgDATA.length/4 ); }
+	var img = ctx.createImageData( oCANVAS.width, 1);
+	Y = iY/window.H2 -1.0;
+	Y2 = window.POW05-Y*Y;
+	for(var iX=0;iX < oCANVAS.width;iX++){
+		X = iX/window.W2 - 1.0;
+        	Radius = Y2 - X*X;
+		BW = eval( s_BW );
+		HUE = eval( s_HUE );
+		iA = ( 255 * eval( s_A  ))&255;
+		img.data[iX*4+3] = iA;
+		if( iA != 0 ){
+			img.data[iX*4+0] = ( 255 * eval(s_R ))&255;
+			img.data[iX*4+1] = ( 255 * eval( s_G ))&255;
+			img.data[iX*4+2] = ( 255 * eval( s_B  ))&255;
+		}
+
+	}
+	ctx.putImageData( img , 0 , iY  );
+	iY++;
+	$('POS').value = iY;
+	setTimeout("draw_line_rgb(" + iY +")" ,1 );
+return iY;
+}
+
+
+
+
+
+function create_pid(){
+	var sCHARs = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var iT = new Date().getTime();
+	while( iT > 0 ){
+		RS = sCHARs.charAt(iT%sCHARs.length);
+		iT = parseInt( iT / sCHARs.length );
+	}
+}
+
+function start2moveElement(elmnt){
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  while( elmnt.tagName != "DIV" ){
+	elmnt = elmnt.parentNode;
+}
+	elmnt.onmousedown = dragMouseDown;
+  elmnt.style.cursor = "move";
+
+  function dragMouseDown(e){
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+    elmnt.style.cursor = "default";
+    elmnt.onmousedown = null;
+  }
+}
+
+function saveTextAsFile(){
+	var oTXT = $('txtJson');
+	var oMATH = new Object();
+	oMATH.R = $('txtR').value;
+	oMATH.G = $('txtG').value;
+	oMATH.B = $('txtB').value;
+	oMATH.A = $('txtA').value;
+	oMATH.BW = $('txtVAR_BW').value;
+	oMATH.HUE = $('txtVAR_HUE').value;
+	oMATH.preview = $('img_btn_preview').src;
+	oTXT.innerHTML = JSON.stringify( oMATH ).split("\",\"").join("\",\n\"");
+
+	var textToWrite = oTXT.innerHTML;
+
+	var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
+	var fileNameToSaveAs = "math.json"; //filename.extension
+
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileNameToSaveAs;
+	downloadLink.innerHTML = "Download File";
+	if (window.webkitURL != null) {
+	// Chrome allows the link to be clicked without actually adding it to the DOM.
+	downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+	} else {
+	// Firefox requires the link to be added to the DOM before it can be clicked.
+	downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+	downloadLink.onclick = destroyClickedElement;
+	downloadLink.style.display = "none";
+	document.body.appendChild(downloadLink);
+	downloadLink.addEventListener("click",function(e){ document.body.removeChild(e.target);})
+	}
+
+	downloadLink.click();
+}
+
+
+function load_json_text( oBTN ){
+	var oMATH = new Object();
+	oMATH = JSON.parse( oBTN.value );
+	$('img_btn_preview').src = oMATH.preview;
+	 $('txtVAR_BW').value = oMATH.BW;
+	 $('txtVAR_HUE').value = oMATH.HUE;
+	 $('txtR').value = oMATH.R;
+	 $('txtG').value = oMATH.G;
+	 $('txtB').value = oMATH.B;
+	 $('txtA').value = oMATH.A;	
+}
+
+
+
+function load_json_file( oFILE ){
+	var reader = new FileReader();
+	var oMATH = new Object();
+	var oTXT = $('txtJson');
+
+	reader.onload = function(){
+		oMATH = JSON.parse( reader.result );
+		/*
+		var a_btn = $('img_out').getElementsByTagName("button");
+		var btn_view = document.createElement("button");
+		btn_view.id = "btn_icon_" + parseInt( i );
+		btn_view.calss = "img_preview";
+		btn_view.addEventListerner("click", load_json_text(this));
+		var img_1 =  document.createElement("img");
+		img_1.src = oMATH.preview;
+		btn_view.appendChild( img_1 );
+		btn_view.value = $('txtJson')innerHTML;
+		
+		$('img_out').appendChild( btn_view );
+		*/
+		$('img_btn_preview').src = oMATH.preview;
+		$('txtVAR_BW').innerHTML = oMATH.BW;
+		$('txtVAR_HUE').innerHTML = oMATH.HUE;
+		$('txtR').value = oMATH.R;
+		$('txtG').value = oMATH.G;
+		$('txtB').value = oMATH.B;
+		$('txtA').value = oMATH.A;
+
+	}
+	reader.readAsBinaryString( oFILE.files[0] );
+	//reader.readAsText( oFILE.files[0] );
+}
+
+
+
+</script>
+</head>
+
+<body onload="$('s__file__').value = window.loaction;">
+
+<div style="display: flex; width: 100%; height: 100%;  justify-content: space-around;">
+	<canvas id="myCanvas" width="1920" height="1920" style="border: none;position: absolute; top: 0;left: 0;margin: 0;">Your browser does not support the HTML5 canvas tag.</canvas>
+<div>
+
+	<div class="win_message" id="win_message" title="X:Y">
+		<form action="_WIN_BW.html" method="post">
+			<table border="0" cellpadding="0" cellspacing="0" style="empty-cells: show;">
+			<tr>
+			<td background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAgCAYAAAAbifjMAAAABm
+				JLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QINBiwDPdOvnAAAAB1pVFh0Q29tbWVu
+				dAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADHklEQVRIx6WVz24bVRTGf+fcO+M4TmKbNoUCilM3DRKbsinLbs
+				IK8Qq8ARv+rPoA7OABECuQKhYgdoCiCAhULKjYNJEagWiJikoLdUMc27EzM/ewmElsJ13EdKSr0Xd1znfOfOe7c4Vj
+				z/ra6nPna7zns70VCYNFzBwAZnmACKNYRpNv//zNh7PZg7fL7Q2i7jaa7CJFHmZFtIzhI4Jfb361Xuv8crXy6AalvT
+				to1oEQimAgWP72MoZ9UfmDWufm1dkHXxPv/YGQEoLDBZ9XNDDLEyQbx/77tdVzM9n9dyqPbhTJGbgKn20lfHs/JhGH
+				quC8oioM+ukY9uer9u704w1KnTuIpVg0wxvXe9xKG1SXFtE4AqdoHCHOkXV6Y9j70F2Jutto2iUEx8cbgVtpg9rLS1
+				QuNdFSjKhD4ghRJev1xrDXrH9BkzaEFGcRa3/F1C41qCw1KTcWEO9ABFUFEUKajmGPmZNCEEwIBbuW4jy5GFnIsuG8
+				R7AeNxLGRI8+cdeehkCO+/N/dCCHnhc5JYEw9PwpE092YPlSEVBFVJFTd2AjuonkiafsQm1UdLOcQGVCDUZYDquLyg
+				QayJBECg2QSTQ44QM59SDU7CSDTOAmteORMpkbNUnt4dMcJi8izXAQwUDIBhkXz5T4baoKOkPIyojqEbON/t6LSr6X
+				+O/6Wn9tOnWEQcJbs/+yal0O9tuEPca9IAXNyJbudA7eb0cL9EMd7ac880+LT7s/8lK6TWY7pLJLKrtkbpfg2ljUga
+				gLcb785u27P8UXX0Bdk+f7O0S9Do2/7/HR5icMymcIUljFgABS3AeHh8+/euXylbL22bq3TJ8WL/Z+ZzoFm57DRXUQ
+				Pzyl6sG5fK/4ND8zXVqpaYfysx3W/1ymYQkLvRZnK3XK9UXw8VAAVRAHokMCp7wiyT7zc8Kbl7fYnt/n8x/KDDYfIv
+				t3meplR6KbBSyAEY7G7ZXQ1KyPpvuoJSxXd7j2ekIIQmCKL9oVrn35mLkLNbqtwRN8gFWxFCyFkOWXZgCCEBBa3ZS4
+				FuNnHfPNGvG5mPhsjJ/zaFn5DzGaT9S7K2BrAAAAAElFTkSuQmCC" style="width: 16px;height: 48px;background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%;vertical-align: middle;">
+			</td>
+			<td title="message-window" id="win_message_title" background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAgCAYAAADaDrJgAAAABmJLR
+					0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QINBh4j683bJQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlY
+				XRlZCB3aXRoIEdJTVBkLmUHAAAAdElEQVQoz2O8f3TJJwY0wCL2eAEvhiDn20sMGIIM/1gxBdPO8WEKnha1xRTk0VLHFGQXE8UU/
+				PfnD4YgEwMWMCqIEUeMPJiCP769w6KS7SuGIOMHH8X/mIlBVA1T+29BOUztzfx8GNoZVezlMc3UKFfG0A4A7gMZePnfbVIAAAAAS
+				UVORK5CYII=" style="height: 48px;background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%;text-align: left;" onmousedown="start2moveElement($('win_message'))">
+				<div class="div_title">
+				<div>
+					<button type="button" id="btn_math" onclick="f_json.click()"> </button>
+					<button type="button" id="btn_open" style="display: 'inline-block';" name="BTN_OK" value="open" onclick="window.draw_line_rgb(0,1);"> </button>
+					[X,Y] -> RGB:
+					<span id="s_time"> </span>
+				</div>
+				<div>
+					<select id="l_mode" style="height: 24px; display: none; " onchange="window.draw = window[this.value];">
+						<option value="draw_line_rgb">RGB</option>
+						<option value="draw_line_rgb"> RGB(X,Y) </option>
+					</select>
+				</div>
+
+				<div>
+				<button type="button" id="btn_next" id="btn_next" onclick="draw_line_rgb(0);$('btn_x').style.display='inline-block';"></button>
+				<button type="button" id="btn_x" style="display: none;" onclick="this.style.display='none';window.isBREAK=true;"> </button>
+				<button type="button" class="btn_download" style="display: none;" id="btn_savefile" onclick="saveTextAsFile()"> </button>
+
+				&nbsp;&nbsp;
+				<button type="button" id="btn_hide" onclick="this.style.display='none';$('btn_show').style.display='inline';$('win_message').style.opacity='0.005';"></button>
+				<button type="button" id="btn_show" onclick="$('win_message').style.opacity='1.0';this.style.display='none';$('btn_hide').style.display='inline';"></button>
+				</div></div></td>
+			<td background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAgCAYAAAAbifjMAAAABmJLR0QA/w
+					D/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QINBicdJChLNAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRl
+					ZCB3aXRoIEdJTVBkLmUHAAAC40lEQVRIx6WUTWhdRRzFf/97577bpEnbUPOqidUYTdUHSqkgRSg24KKIKAZEJG4UXRRBka5cRz
+					ei7nQrgmBbLN2ICv2g1ErUqoXi56ppaqX5MK3pu/e9e2fu/F3kPV8UvH2JA7OYj3Pm/M+cGbnw5YfLlDRFCqtmJnXRiZm57K0n
+					n37myup1SQ4+oqUEKjj6SMwtLJpRLqcb33l0cv+Bvwn8u9VSAhS0EIqih2WGmY1q/JTffOrZA1PjAAE+oqyrN+SZQFJny+KvbL
+					/0Bdvmf9z7xssvvg0gLzx3b6mCjRFMVBN2a46v55jEc9FW+cSN8tnv+a3m7OCe0gokDDlpYNKf5ZX6DJpYttUXGLYRN/n+l0xf
+					7e5SAoIA9Y6DjX72LRzirvmMeDmj2lxCm26fiauD5QQCrpliwpzp4THGfjhDUFd6Gw1sqjuNd65cQKWCCBAINorBKeqBwoPXes
+					B6m7QOWAemlQ9B10rQDhbaGQTdo0CQDloVVdWga7isdPH/MrkruGrHBdXWlKKq0rUHKm0TBWkT6ppMVESko6alIuiqAlaX0J7W
+					tXjQMrDlfvsqu1PwjyTJqgyscK0viR0FwfrfAiAi/n8RqKoYpK90U2E9zsfYymbGFhM0UbSyhTRrkGR21jTTpRvcgZJFBQ/0p+
+					z+9BvCeCvu9hqzl77mj8yHhkpSSrAhEp7I/mT/6+9DUSF6fJLZ4yf4rmFZcv5NufbYHaW/ctC0BBfmCEfvI37qeerTX/HxR4d4
+					L3ec99pjegZ3lDsV92ImHkKGRrh29CjHDh/hcNNRe/D+dFOuDxs7cNsNnIarJ09x8dtznL48x+eETOzazs+FDQPHuExt3lRawt
+					WBiOtXEpxxTO2okIa9nMtipl1cnLccMx/sHPhP8PiZ37huItJmkyO7YlxeYIucyAeII/RWRsw9r925Ek3n0ayA3BIUjiEX8Gpt
+					K0Pf/0I4sgHNPEEOQVEghUMLsFb6/wLEEmYCEEu8UgAAAABJRU5ErkJggg==" style="width: 16px; height: 48px;text-align: center;background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%;"></td>
+			</tr>
+			<tr>
+			<td background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAABmJLR0QATAC3AEI8g8YeAAAACXBI
+			WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QINBCUVG0F16gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAlElEQVQoz6
+			2QOwrCUBBFz8yYJ1GSRp+l2a9rcBvuQbG2ECysBDux0SLJWDw/IIKIuXCaW5wZrmxXi31x2VWD05r8vCG7HqGuaVqj8cD8kDFbFgynFWEyJsRIiCN6
+			ZYnmfZQ/810ggAgiAu98FLSAv1AUNQUz5IHqU6ju4Dg4uCdH6kDc0wkz1BS5gyakkw+63+DH3ACPzSkkgJdikQAAAABJRU5ErkJggg==" style="width: 16px;height: 32%;background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%;"></td>
+			<td style="min-width: 320px;height: 100%; background-color: #40B23E;" >
+				<div style="max-width: 512px;">
+
+					<div class="txtCOL" style="display: block;width: 100%; overflow-x: auto;overflow-y: hidden; height: 48px;padding: 0;">
+							<input type="number" id="nr_x" value="1920px" style="display: inline; width: 225px; height: 24px;" onchange="if( $('check_x_is_y').checked ){ $('nr_y').value = this.value; this.title = this.value + 'x' + $('nr_y').value; }"><span>px</span>
+							<select id="fRATIO" value="1" style="display: inline;  width: 250px; height: 24px;">
+								<option value="1">Quadratisch</option>
+								<option value="0.8660254037844387">Hexagonal</option>
+								<option value="0.7071067811865476">DIN</option>
+								<option value="0.6180339887498949">Goldener-Schnitt</option>
+								<option value="0.8">5:4</option>
+								<option value="0.75">4:3</option>
+								<option value="0.666666666666666666666666666">3:2</option>
+								<option value="0.5">2:1</option>
+							</select>
+					</div>
+
+					<div class="txtCOL" id="img_out" style="width: 100%; height: 300px; overflow-x: auto;">
+						<button type="button" class="img_preview"> <img id="img_btn_preview" src=""> </button>
+						<input type="hidden" id="img_src_preview" name="img_src_preview" value="">
+					</div>
+
+
+					<div>
+						<select data-w="1" class="txtRGB" id="l_VAR" onchange="switch_var_text( this );" title="double-click for text-input..." value="BW" style=" display: none; " ondblcick="">						
+							<option value="FNC_Y"> FNC_Y(Y): Manipuliert Y vorher </option>
+							<option value="FNC_X"> FNC_X(X): Manipuliert X vorher </option>
+							<option value="Y2"> Y2(Y): Quadrat </option>
+							<option value="BW"> BW(X,Y): Black/White </option>
+						</select>
+					</div>
+
+
+					<div class="txtCOL" style="width: 100%;display: none;" id="d_varname">
+						<div>
+							<input type="text" class="txtRGB" id="txt_varname" value="" style="width: 90%; background-color: #C0C0C0;display: inline-block;">
+						</div>
+						<div style="width: 10%;">
+							<button type="button" id="btn_add" style="display: inline-block;" value="new" onclick="add_var_name( $('txt_varname').value )"> </button>
+						</div>
+					</div>
+
+					<label for"txtVAR_BW">Axiale Komponente:</label>
+					<textarea id="txtVAR_BW" name="VAR_BW" class="txtRGB" style="width: 512px;height: 256px;" value="" title="Light(X,Y)" data-fix_text="1"></textarea>
+					<label for"txtVAR_HUE">Radiale Komponente:</label>
+					<textarea id="txtVAR_HUE" name="VAR_HUE" class="txtRGB" style="width: 512px;height: 256px;" value="" title="Color(X,Y)" data-fix_text="1"></textarea>
+
+
+					<input type="text" class="txtRGB" name="R" id="txtR" title="Rot" style="background-color: #FFC0C0;" value="BW" data-fix_text="1">
+					<input type="hidden" name="PAGE" id="s__file__" value="html/BW.htm">
+					<input type="hidden" name="a_ids" id="a_ids" value="R G B A img_src_preview txtVAR VAR_BW">
+	
+					<input type="text" class="txtRGB" name="G" id="txtG" title="Gruen" style="background-color: #C0FFC0;" value="BW" data-fix_text="1">
+					<input type="text" class="txtRGB" name="B" id="txtB" title="Blau" style="background-color: #C0C0FF;" value="BW" data-fix_text="1">
+					<input type="text" class="txtRGB" name="A" id="txtA" title="Alpha" style="background-color: #C0C0C0;" value="1 - parseInt( X*X+Y*Y )" data-fix_text="1">
+					
+					<textarea id="txtJson" style="display: none"> </textarea>
+
+					<input type="hidden" id="VAR_RR" value="X*X + Y2">
+					<input type="hidden" id="VAR_R" value="X*X + Y2">
+					<input type="hidden" id="VAR_G" value="X*X + Y2">
+					<input type="hidden" id="VAR_B" value="X*X + Y2">
+					<input type="hidden" id="VAR_A" value="X*X + Y2">
+
+					<input type="hidden" id="VAR_HUE" name="VAR_HUE" value="">
+					<input type="hidden" id="VAR_BW" name="VAR_BW" value="">
+
+					<input type="file" id="f_json" accept="text/*" style="display: none;" onchange="load_json_file(this)">
+					<progress id="POS" max="1000" value="0" style="opacity: 0.1;"> 0% </progress>
+				</div>
+			<td background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAABmJLR0QATAC3AEI8g8YeAAAACXB
+			IWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QINBCYKvWQr3AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAk0lEQVQo
+			z62QMQrCUBBE33y+eAXxON7PW3gIezuJjaWtWHgBjfnJjkU+gpAuGdhmdt8wrHbHg8FE+TB0b0r3ou9bNsOdfdOwvd5IJVi1xj08S+ZS1pz6zLnok
+			ZipPOkKJCEAT49tbBgb2GBj/BcACcIoqv+DowaYTMWMx6WMBUoiGYgRUhgs7HoXxoGWaLDED2boC62NeimJxVPTAAAAAElFTkSuQmCC" style="width: 16px; height: 32%;background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%;">
+			</td>
+			</tr>
+			<tr>
+			<td background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsTAA
+					ALEwEAmpwYAAAAB3RJTUUH4QINBBESPg8TvgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAC40lEQVQ4y2WQS2hdVRiFv3/vc859nNxr
+					bkJsKiWVDkpbja1mZrBYdFYpDkQQbEHRmRBRLCg4daCIDgQnDtSZIAjqQBAsBEMpFW0LFfGBLWitYJPcPO49+/VvJ6ZVXLNvsfgGS344+/mV3vjnvfWN83TWL1OO/y
+					THiKpFc8n7613eueip5yYoZ0rKmYpqusTWBVIKRrOsKwbFkrMBFVDIKUPM3DHZoWoZipbBVIIpBIxAzpAzJmn+NVGQqFBKcjZIykhSSMo9JeweVNhSMAKCQlRyVHLI
+					GB/1uyhtonRItFEtIHFzNLO2yok7B5RkrABBwUeyS+ACZrjZnInSIdgJgqlJtMhqkATEiDSBR3TIQt2j1IxJCj6Bj+Ajdqbfu3bg4P6nTRj1TTOkaDawfoQJEYmZFK
+					CzMWZ/p2K9Nc2qcWAzRhRjFLvyzbf64/cX+4XkB6XZwrotCrdN4TyEBEFJUejd2GJ+PGK2uwtp9bEtS91qYfcMaobDrcu9Xv9ZoutIs41txljXYFxEQkaCojFTboyZ
+					u/oHh68NWVhvsbDWQfgnn3zw7tK0Hb1Vr/8kk2u/MDn8jXp7laJpyEFRl9EAMRhwIE6hydgdwfUrv5+fv+/eRU3sS86TXQAXKXzEuoSJgtECqxaTC5AKqTrYpadOcu
+					7CJa5ev54PH7rri6LbezTEPB18RH1CfUI82NzCVn2ktwsZ7KGY3YedO4A9d+ESb7x6mi+XV/jq67OjI4fu/kzL9nEXZWrsVZzPBK/ECJpLpOojvRmYnIXB7K0PXjv9
+					PK+8/jYAz5164vbdU/2PJtzmA/XmX3Zye43btjfpe8eEQttWVGUba9q3BAAvPnOKN9/7cAdl6cnHX2pH93J3tNGrR5u2Hm3RbRo6PlCGgPH6XwHAiaOLfLq8cpOPL9
+					4/O+i2XrDBnSzHo6lWM7aFc2IbJ/gg/xPs5LFjR/n4zPK/GimPzR98WEJ6SH1zJPmwV30Y/A2c4nBWlBC6PgAAAABJRU5ErkJggg==" style="width: 16px; height: 16px;background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%;">
+			</td>
+			<td style="height: 16px;background-color: transparent;background-repeat: no-repeat;background-size: 100% 100%;" background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAYAAAArij59AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJT
+					UUH4QINBBIjRPxARwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAY0lEQVQoz2P03eH0nwEPYPn/F688AwvD778EFPz6Q0DBXwIKWBgIKJBnF8KvIPswXnkGxi+GXPjDg
+					UlADL8VbPa++BX8F5bE74ZnHpZ43cC4TkYIvyMP/PyH3w0n/zC8wacAAPwRG3/+MxwHAAAAAElFTkSuQmCC">
+			</td>
+			<td style="width: 16px; height: 16px;background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%;" background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3
+				RJTUUH4QINBBIBkZwBowAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAC00lEQVQ4y23QTW9UZRjG8f955jkztS10plOmTKWxCoYgghETk65MXKmRtfEzuPBr
+				aNjgB3DBjpUbNwYMFkpqKL7AJIaSvlKnZ6aTeetwOjPnnOd+bhcqiYb//pcruYKrP3yoKgrOQ+bAOXLqWNQCX951zD+oYcUTJqASEGU5fnGWFcmx7oLIvsDiQT3GCNbAKZ1kptUAp5hMQS
+				3eTuCckGaeRCAVBoZMwAmBOAwOkxOmwhyXxmUmdg8InAcxUDiJny6REBI75diJJM7tWVIHeIJAMEbIhwFv5EtcWe/B8xgTGIL8SYLKGbJUiLMefScMBJeIPjL8u2wchTwsvlLik70FSj+u
+				AYZcOI1ZPIe+usQwU9pjR8t5euLTYyd3rcVhjWGqkOfsRIWPd05z9tvvYZxiJ6bJvX4Bc/4ySadLt9sjSlIORemK7x6K3LKvFWapFma4OCpz6Xad4q2bBGmKnZzBnnsbc2UZrzD4/TH1do
+				/9TIhEk1j1JuDtF6tw4mCbwuYdbDwCE2Jnq4QX3sW8t4zaPMP796lv7rB1PGJbPA2l1/b+OoBdWFnDSwBBiCmdIqwuYS6/T+7iO/hMGK38RP3hQ552u2w4zzMY9bz/ZgTNCmBNsUJusogp
+				L2CWzmPefIugPI/vdDhevcfBvVX+OGjyOHFsqEqk+nMDvgJoATb/wVWYWyCYqxJMncAPh2S//cpgfZ16rcaTwza1JKOmqnuqmx34HGAOaANWy1UIQvz+PmmzwXBrh872Dn82WmzFQ544YU
+				PV76k+bcOnA2idBpr8XRB9tKzZOGM8iBn0jmg/j4mGKc8yx7ZXdr2mkepaFz77PwYIvjszq2nmiDOhnzlamdIQT+S9NLz2+6rXomLxa/p95oFD/ptdSTzjTPVY0COH9rxKV3w3Vr1xpHp9
+				AE36feZeggHsA0c79XqUONkdiT4aib/T9P424AAq/7zd5uX9BXgIvjUwfMrDAAAAAElFTkSuQmCC">
+			</td>
+			</tr>
+			</table>
+			</form>
+		</div>
+
+
+</body>
+</html>
