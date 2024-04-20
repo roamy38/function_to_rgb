@@ -447,7 +447,6 @@ function tan( f ){ return Math.tan( f * Math.PI ); }
 function sin_( f ){ return Math.asin( f ) / Math.PI; }
 function cos_( f ){ return Math.acos( f ) / Math.PI; }
 
-
 function rnd( f = 1.0 ){ return f* Math.sinh( ( Math.random() - 1 )*1.762747174039086 ); }
 function ln( f ){ return Math.log(f); }
 function pow( f1 , f2 ){ if( f2 < 0){ return -Math.pow(f1, -f2); }return Math.pow(f1, f2);  }
@@ -472,7 +471,7 @@ var X = 0.0;
 var Y = 0.0;
 var Y2 = 0.0;
 var Angle=0;
-var Radius=0;
+var R=0;
 var pXY = [0,0];
 var Z = 0.0;
 var T = 0.0;
@@ -713,10 +712,10 @@ function draw_line_rgb( iY , isTest=false ){
 	if( window.isBREAK ){ return parseInt( imgDATA.length/4 ); }
 	var img = ctx.createImageData( oCANVAS.width, 1);
 	Y = iY/window.H2 -1.0;
-	Y2 = window.POW05-Y*Y;
+	Y2 = Y*Y;
 	for(var iX=0;iX < oCANVAS.width;iX++){
 		X = iX/window.W2 - 1.0;
-        	Radius = Y2 - X*X;
+        	R = Math.sqrt( Y2 + X*X );
 		BW = eval( s_BW );
 		HUE = eval( s_HUE );
 		iA = ( 255 * eval( s_A  ))&255;
@@ -911,7 +910,7 @@ function load_json_file( oFILE ){
 				<div class="div_title">
 				<div>
 					<button type="button" id="btn_math" onclick="f_json.click()"> </button>
-					<button type="button" id="btn_open" style="display: 'inline-block';" name="BTN_OK" value="open" onclick="window.draw_line_rgb(0,1);"> </button>
+					<button type="button" id="btn_open" style="display: 'inline-block';" name="BTN_OK" value="open" onclick="window.draw_line_rgb(0,1);" title="generate preview.."> </button>
 					[X,Y] -> RGB:
 					<span id="s_time"> </span>
 				</div>
@@ -923,7 +922,7 @@ function load_json_file( oFILE ){
 				</div>
 
 				<div>
-				<button type="button" id="btn_next" id="btn_next" onclick="draw_line_rgb(0);$('btn_x').style.display='inline-block';"></button>
+				<button type="button" id="btn_next" id="btn_next" onclick="draw_line_rgb(0);$('btn_x').style.display='inline-block';" title="generate resolution of number-input &quot;px-resolution&quot;.."></button>
 				<button type="button" id="btn_x" style="display: none;" onclick="this.style.display='none';window.isBREAK=true;"> </button>
 				<button type="button" class="btn_download" style="display: none;" id="btn_savefile" onclick="saveTextAsFile()"> </button>
 
@@ -954,12 +953,12 @@ function load_json_file( oFILE ){
 				<div style="max-width: 512px;">
 
 					<div class="txtCOL" style="display: block;width: 100%; overflow-x: auto;overflow-y: hidden; height: 48px;padding: 0;">
-							<input type="number" id="nr_x" value="1920px" style="display: inline; width: 225px; height: 24px;" onchange="if( $('check_x_is_y').checked ){ $('nr_y').value = this.value; this.title = this.value + 'x' + $('nr_y').value; }"><span>px</span>
-							<select id="fRATIO" value="1" style="display: inline;  width: 250px; height: 24px;">
-								<option value="1">Quadratisch</option>
-								<option value="0.8660254037844387">Hexagonal</option>
-								<option value="0.7071067811865476">DIN</option>
-								<option value="0.6180339887498949">Goldener-Schnitt</option>
+							<input type="number" id="nr_x" value="1920px"  title="px-resolution" style="display: inline; width: 225px; height: 24px;" onchange="if( $('check_x_is_y').checked ){ $('nr_y').value = this.value; this.title = this.value + 'x' + $('nr_y').value; }"><span>px</span>
+							<select id="fRATIO" value="1" style="display: inline;  width: 250px; height: 24px;"  title="width-height-ratio">
+								<option value="1">square</option>
+								<option value="0.8660254037844387">hexagonal</option>
+								<option value="0.7071067811865476">DIN (german std)</option>
+								<option value="0.6180339887498949">golden ration</option>
 								<option value="0.8">5:4</option>
 								<option value="0.75">4:3</option>
 								<option value="0.666666666666666666666666666">3:2</option>
@@ -993,17 +992,22 @@ function load_json_file( oFILE ){
 					</div>
 
 					<label for"txtVAR_BW">Axiale Komponente:</label>
-					<textarea id="txtVAR_BW" name="VAR_BW" class="txtRGB" style="width: 512px;height: 256px;" value="" title="Light(X,Y)" data-fix_text="1"></textarea>
+					<textarea id="txtVAR_BW" name="VAR_BW" class="txtRGB" style="width: 512px;height: 256px;" value="" title="Light(X,Y)" data-fix_text="1">
+						0.5 + 0.5 * cos( sin( X*X+Y*Y ) + atan2( X,Y)*12 )
+					</textarea>
 					<label for"txtVAR_HUE">Radiale Komponente:</label>
-					<textarea id="txtVAR_HUE" name="VAR_HUE" class="txtRGB" style="width: 512px;height: 256px;" value="" title="Color(X,Y)" data-fix_text="1"></textarea>
+					<textarea id="txtVAR_HUE" name="VAR_HUE" class="txtRGB" style="width: 512px;height: 256px;" value="" title="Color(X,Y)" data-fix_text="1">
+						0.5 + 0.5 * cos( sin( X*X + Y*Y ) + atan2( X,Y)*12 + 0.25 )
+					
+					</textarea>
 
 
-					<input type="text" class="txtRGB" name="R" id="txtR" title="Rot" style="background-color: #FFC0C0;" value="BW" data-fix_text="1">
+					<input type="text" class="txtRGB" name="R" id="txtR" title="Rot" style="background-color: #FFC0C0;" value="HUE | BW" data-fix_text="1">
 					<input type="hidden" name="PAGE" id="s__file__" value="html/BW.htm">
 					<input type="hidden" name="a_ids" id="a_ids" value="R G B A img_src_preview txtVAR VAR_BW">
 	
 					<input type="text" class="txtRGB" name="G" id="txtG" title="Gruen" style="background-color: #C0FFC0;" value="BW" data-fix_text="1">
-					<input type="text" class="txtRGB" name="B" id="txtB" title="Blau" style="background-color: #C0C0FF;" value="BW" data-fix_text="1">
+					<input type="text" class="txtRGB" name="B" id="txtB" title="Blau" style="background-color: #C0C0FF;" value="HUE" data-fix_text="1">
 					<input type="text" class="txtRGB" name="A" id="txtA" title="Alpha" style="background-color: #C0C0C0;" value="1 - parseInt( X*X+Y*Y )" data-fix_text="1">
 					
 					<textarea id="txtJson" style="display: none"> </textarea>
